@@ -47,7 +47,7 @@ const productSchema = new mongoose.Schema({
             type: String,
             required: true,
         }
-}],  
+    }],  
     featured:{
         type: Boolean,
         default: false,
@@ -57,6 +57,8 @@ const productSchema = new mongoose.Schema({
         required: true,
     }
 
-})
+},
+{timestamps: true}
+);
 
 module.exports = mongoose.model("Product", productSchema);
